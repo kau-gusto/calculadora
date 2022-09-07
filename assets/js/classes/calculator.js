@@ -24,6 +24,10 @@ export default class Calculator {
   }
 
   set defined_calc_type(value) {
+    if(this.parsed_now_number == 0) {
+      this._defined_calc_type = false;
+      return;
+    }
     this._defined_calc_type = value;
   }
 
