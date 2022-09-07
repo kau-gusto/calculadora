@@ -146,6 +146,7 @@ export default class Calculator {
 
   c() {
     this.now_number = "0";
+    this._defined_calc_type = false;
   }
 
   ce() {
