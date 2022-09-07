@@ -1,0 +1,199 @@
+body {
+    padding: 0;
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --bg-color: #fff;
+        --font-color: #000;
+        --comp-color: #eee;
+        --comp-color-2: #ddd;
+        --border-color: #666;
+        --primary-color: #f22;
+    }
+}
+
+@media screen and (prefers-color-scheme: dark) {   
+    :root {
+        --bg-color: #000;
+        --font-color: #fff;
+        --comp-color: #222;
+        --comp-color-2: #333;
+        --border-color: #888;
+        --primary-color: #fd2121;
+    }
+}
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.calculator {
+    border: 8px var(--border-color) solid;
+    border-radius: 4px;
+    background-color: var(--border-color);
+    max-width: 48em;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    max-height: 64em;
+    display: grid;
+    grid-template-rows: 15em 1fr;
+    grid-template-columns: 1fr;
+}
+
+
+.view {
+    background-color: var(--bg-color);
+    border: 2px var(--border-color) solid;
+    width: calc(100% - 4px - 2em);
+    color: var(--font-color);
+    display: grid;
+    grid-template-rows: 2.5em 2em 4em 2em 2.5em;
+    text-align: end;
+    align-items: center;
+    padding: 1em;
+    justify-self: flex-end;
+    border-radius: 0.5em;
+}
+
+.view-last, .view-result {
+    font-size: 2em;
+}
+
+.view-signal, .view-equal {
+    font-size: 2em;
+}
+
+.view-now {
+    font-size: 3em;
+}
+
+
+.buttons-container {
+    display: grid;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        'ce    c     per   div'
+        'num-7 num-8 num-9 mul'
+        'num-4 num-5 num-6 sub'
+        'num-1 num-2 num-3 add'
+        'dot   num-0 sig   equal'
+    ;
+}
+
+.button.is-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.button.is-black {
+    color: white;
+    background-color: black;
+}
+
+.button.is-secondary {
+    background-color: var(--comp-color);
+    color: var(--font-color);
+}
+
+
+.button {
+    border: 2px var(--border-color) solid;
+    border-radius: 0.5em;
+    width: 100%;
+    height: 100%;
+
+    font-size: 1.5em;
+}
+
+.button-per {
+    grid-area: per;
+}
+
+.button-div {
+    grid-area: div;
+}
+
+.button-mul {
+    grid-area: mul;
+}
+
+.button-sub {
+    grid-area: sub;
+}
+
+.button-add {
+    grid-area: add;
+}
+
+.button-dot {
+    grid-area: dot;
+}
+
+.button-sig {
+    grid-area: sig;
+}
+
+.button-equal {
+    grid-area: equal;
+}
+
+.button-c {
+    grid-area: c;
+}
+
+.button-ce {
+    grid-area: ce;
+}
+
+.button-0 {
+    grid-area: num-0;  
+}
+
+.button-1 {
+    grid-area: num-1;  
+}
+
+.button-2 {
+    grid-area: num-2;  
+}
+
+.button-3 {
+    grid-area: num-3;  
+}
+
+.button-4 {
+    grid-area: num-4;  
+}
+
+.button-5 {
+    grid-area: num-5;  
+}
+
+.button-6 {
+    grid-area: num-6;  
+}
+
+.button-7 {
+    grid-area: num-7;  
+}
+
+.button-8 {
+    grid-area: num-8;  
+}
+
+.button-9 {
+    grid-area: num-9;  
+}
+
