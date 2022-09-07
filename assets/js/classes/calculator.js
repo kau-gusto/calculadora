@@ -59,7 +59,7 @@ export default class Calculator {
   }
 
   resetIfCalcType() {
-    if (this.defined_calc_type) {
+    if (this.defined_calc_type && this.parsed_now_number !== 0) {
       this.last_number = this.calcResult();
       this.now_number = "0";
     }
